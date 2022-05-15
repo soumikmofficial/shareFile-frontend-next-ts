@@ -42,8 +42,11 @@ const Download: NextPage<{ file: IFile }> = ({ file }) => {
 export async function getServerSideProps(context: GetServerSidePropsContext) {
   const { id } = context.query;
   let file;
+  console.log("..................", process.env.API_BASE_ENDPOINT);
   try {
-    const { data } = await axios.get(`http://localhost:5000/api/v1/file/${id}`);
+    const { data } = await axios.get(
+      `${process.env.NEXT_PUBLIC_API_BASE_ENDPOINT}api/v1/file/${id}`
+    );
     file = data;
   } catch (error) {
     console.log(error);
