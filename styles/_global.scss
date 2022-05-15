@@ -1,0 +1,17 @@
+$border-radius-small: 0.3rem;
+$border-radius-mid: 0.8rem;
+
+$box-width: clamp(20rem, 21rem, 23rem);
+
+$col-bg-main: hsl(30, 7%, 5%);
+$col-bg-secondary: hsl(15, 2%, 57%);
+$col-success: hsl(93, 87%, 65%);
+$col-failed: hsl(12, 61%, 64%);
+
+$padding-large: 1.5rem;
+
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

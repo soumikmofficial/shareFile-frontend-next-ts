@@ -1,0 +1,46 @@
+@import "global";
+
+.container {
+  min-height: 100vh;
+  width: 100vw;
+  background: $col-bg-main;
+  @include flexCenter;
+  text-align: center;
+
+  .wrapper {
+    background: white;
+    width: $box-width;
+    padding: $padding-large;
+    border-radius: $border-radius-mid;
+    @include flexCenter;
+    flex-direction: column;
+    gap: 0.3rem;
+
+    .icon {
+      font-size: 3rem;
+    }
+    button {
+      background: black;
+      color: white;
+      padding: 0.2rem 0.5rem;
+      cursor: pointer;
+      margin-top: 2rem;
+    }
+
+    .details {
+      display: flex;
+      align-items: center;
+
+      .name {
+        font-size: 0.8rem;
+        flex: 0.6;
+        font-weight: bold;
+      }
+      .size {
+        font-size: 0.8rem;
+        flex: 0.4;
+        font-weight: bold;
+      }
+    }
+  }
+}
